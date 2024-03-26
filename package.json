@@ -4,7 +4,9 @@
   "description": "What am I about?",
   "main": "index.html",
   "scripts": {
-    "start": "concurrently 'nodemon:server.ts' 'npm:--prefix:frontend:run:dev'"
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "sleep 3; nodemon server.ts",
+    "start": "concurrently 'npm:dev:backend' 'npm:dev:frontend'"
   },
   "browserslist": [
     ">0.2%",
