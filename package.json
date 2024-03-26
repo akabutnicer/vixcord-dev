@@ -4,7 +4,7 @@
   "description": "What am I about?",
   "main": "index.html",
   "scripts": {
-    "start": "nodemon -r dotenv/config server.ts"
+    "start": "nodemon server.ts"
   },
   "browserslist": [
     ">0.2%",
