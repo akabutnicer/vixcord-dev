@@ -1,7 +1,7 @@
 "use strict";
 exports.__esModule = true;
-var user_controller_1 = require("../controllers/user.controller");
-var conversions_controller_1 = require("../controllers/conversions.controller");
+var user_controller_1 = require("../controllers/user.controller.js");
+var conversions_controller_1 = require("../controllers/conversions.controller.js");
 var express_1 = require("express");
 var app = (0, express_1["default"])();
 app.use(express_1["default"].urlencoded({ extended: false }));
