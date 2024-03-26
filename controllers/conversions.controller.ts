@@ -1,4 +1,3 @@
-import { Response } from "express"
 import supabase from "../utils/supabase"
 import { 
     TypedRequestBody, 
@@ -10,7 +9,7 @@ import {
 } from '../types';
 import Socket from "../utils/socket"
 
-export const getAllConversations = async function (req: TypedRequestQuery<{user_id: string}>, res: Response) {
+export const getAllConversations = async function (req: TypedRequestQuery<{user_id: string}>, res) {
     // get all conversations this user is attached to 
     const paticipatingConversationIds = await supabase
         .from('user_conversation')
@@ -41,7 +40,7 @@ export const getAllConversations = async function (req: TypedRequestQuery<{user_
     return res.send(conversations.data)
 }
 
-export const createConversation = async function (req: TypedRequestBody<{owner_id: string, participant_ids, group_name: string}>, res: Response) {
+export const createConversation = async function (req: TypedRequestBody<{owner_id: string, participant_ids, group_name: string}>, res) {
   
   
   console.log(req.body)
@@ -103,7 +102,7 @@ export const createConversation = async function (req: TypedRequestBody<{owner_i
     }
 }
 // src/controllers/conversation.controller.ts
-export const getConversationMessages = async function (req: TypedRequestQueryAndParams<{conversation_id: string} ,{last_message_date: Date}>, res: Response) {
+export const getConversationMessages = async function (req: TypedRequestQueryAndParams<{conversation_id: string} ,{last_message_date: Date}>, res) {
     const { conversation_id } = req.params;
     const { last_message_date } = req.query;
 
@@ -132,7 +131,7 @@ export const getConversationMessages = async function (req: TypedRequestQueryAnd
     res.send(messages.data)
 }
 // src/controllers/conversation.controller.ts
-export const addMessageToConversation = async function (req: TypedRequestQueryWithBodyAndParams<{conversation_id: string}, {user_id: string, message: string, conversationid: string}>, res: Response) {
+export const addMessageToConversation = async function (req: TypedRequestQueryWithBodyAndParams<{conversation_id: string}, {user_id: string, message: string, conversationid: string}>, res) {
     const {
       user_id,
       message,
