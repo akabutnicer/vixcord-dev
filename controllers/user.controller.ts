@@ -1,8 +1,7 @@
-import { Response } from "express"
 import supabase from "../utils/supabase"
 import { TypedRequestBody, TypedRequestQuery } from "../types"
 
-export const createUser = async function (req: TypedRequestBody<{user_id: string, password: string, q: string, email: string}>, res: Response) {
+export const createUser = async function (req: TypedRequestBody<{user_id: string, password: string, q: string, email: string}>, res) {
   console.log(res)
     const { data, error } = await supabase
         .from('users')
@@ -20,7 +19,7 @@ export const createUser = async function (req: TypedRequestBody<{user_id: string
     }
 }
 
-export const searchUsers = async function (req: TypedRequestQuery<{user_id: string, q: string}>, res: Response) {
+export const searchUsers = async function (req: TypedRequestQuery<{user_id: string, q: string}>, res) {
 
     let query = supabase
       .from('users')
