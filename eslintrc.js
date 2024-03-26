@@ -8,6 +8,7 @@ export default {
   env: {
     node: true, // Enable Node.js global variables
   },
+  
   rules: {
     'no-console': 'off',
     'import/prefer-default-export': 'off',
