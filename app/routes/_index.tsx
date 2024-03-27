@@ -6,29 +6,10 @@ export const meta: MetaFunction = () => {
     { name: "description", content: "Welcome to Remix!" },
   ];
 };
-function Title({ title, halfway = false }) {
-  var halfwayText = (
-    <>
-      <span class="text-white">{title.slice(0, title.length / 2)}</span>
-      {<span class="text-blue-700">{title.slice(string.length / 2)}</span>}
-    </>
-);
-  return (
-    <div class="absolute left-20 t-5">
-      <h1>
-        {
-          halfway ? (
-            halfWayText
-          ) : title
-        }
-      </h1>
-    </div>
-  ) 
-}
+
 export default function Index() {
   return (
     <>
-      <Title title="Vixcord" halfway={true} />
       <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
         <section class="bg-white dark:bg-gray-900">
           <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
