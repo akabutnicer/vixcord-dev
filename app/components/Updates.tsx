@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {useFetcher} from "@remix/react
+import {useFetcher} from "@remix/react";
 
 const UPDATES_URL = "https://vixcord-updates.vercel.app/updates";
 
