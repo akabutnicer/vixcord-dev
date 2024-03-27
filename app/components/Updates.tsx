@@ -13,6 +13,6 @@ export default function Updates({ periodically = false }) {
   return content;
   }
   catch (err) {
-    return <h1>err</h1>
+    return <h1>{err}</h1>
   }
 }
