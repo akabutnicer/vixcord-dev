@@ -3,14 +3,15 @@ import React, { useState, useEffect } from "react";
 const UPDATES_URL = "https://vixcord-updates.vercel.app/updats";
 
 export default function Updates({ periodically = false }) {
-  var [content, setContent] = useState(<div />);
+  try {
+    var [content, setContent] = useState(<div />);
 
   fetch(UPDATES_URL)
     .then((response) => response.json())
     .then((json) => {
-      alert(json);
+      setContent(JSON.stringify(json));
     })
-    .catch((error) => {
+    .catch((err) => {
       setContent(
         <div
           id="drawer-example"
@@ -58,10 +59,14 @@ export default function Updates({ periodically = false }) {
           </button>
 
           <p class="mb-6 text-sm text-gray-500 dark:text-gray-400">
-            {error}
+            {err}
           </p>
         </div>,
       );
     });
   return content;
+  }
+  catch (err) {
+    return <h1>err</h1>
+  }
 }
