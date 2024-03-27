@@ -6,7 +6,7 @@ export const meta: MetaFunction = () => {
     { name: "description", content: "Welcome to Remix!" },
   ];
 };
-function Title({ title: string, halfway: boolean }) {
+function Title({ title, halfway = false }) {
   var halfwayText = (
     <>
       <span class="text-white">{title.slice(0, title.length / 2)}</span>
