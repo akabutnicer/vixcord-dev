@@ -25,9 +25,6 @@ function Title({ title, halfway = false }) {
 export default function Index() {
   var [show, setShow] = useState(true);
 
-  if (localStorage.__checked) {
-    setShow(false);
-  }
   return (
     <>
       <Title title="Vixcord" halfway={true} />
