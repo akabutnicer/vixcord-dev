@@ -7,9 +7,7 @@ export default function Updates({ periodically = false }) {
   try {
     var [content, setContent] = useState(<div />);
 
-   var fetch = useFetcher();
-    var res = fetch.load(UPDATES_URL);
-    setContent(res);
+    console.log(window);
   return content;
   }
   catch (err) {
