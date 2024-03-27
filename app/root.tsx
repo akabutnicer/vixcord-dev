@@ -2,7 +2,8 @@ import {
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration
+  ScrollRestoration,
+  Links
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
 
