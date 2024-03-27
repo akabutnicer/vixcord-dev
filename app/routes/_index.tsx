@@ -7,6 +7,25 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+function Title({ title, halfway = false }) {
+  var halfwayText = (
+    <>
+      <span class="text-white">{title.slice(0, title.length / 2)}</span>
+      {<span class="text-blue-700">{title.slice(title.length / 2)}</span>}
+    </>
+);
+  return (
+    <div class="absolute left-20 t-5">
+      <h1>
+        {
+          halfway ? (
+            halfwayText
+          ) : title
+        }
+      </h1>
+    </div>
+  ) 
+}
 export default function Index() {
   return (
     <>
