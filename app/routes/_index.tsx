@@ -81,7 +81,7 @@ var [catalog, setCatalog] = useState(<div />);
               >
                 Terms of conditions
               </button>
-              { content }
+              { catalog }
             </div>
           </div>
         </section>
