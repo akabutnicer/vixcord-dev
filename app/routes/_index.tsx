@@ -28,8 +28,6 @@ export default function Index() {
   return (
     <>
       <Title title="Vixcord" halfway={true} />
-      <Updates />
-
       <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
         <section class="dark:bg-gray-900">
           <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
@@ -82,6 +80,7 @@ export default function Index() {
           </div>
         </section>
       </div>
+      <Updates />
       <div
         id="default-modal"
         tabindex="-1"
