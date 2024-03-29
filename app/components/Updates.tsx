@@ -4,8 +4,6 @@ const UPDATES_URL = "https://vixcord-updates.vercel.app/updates";
 
 export default function Updates({ periodically = false }) {
   try {
-
-    console.log(window);
   return <h1>hello</h1>;
   }
   catch (err) {
