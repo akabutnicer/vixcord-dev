@@ -47,7 +47,7 @@ export default function Updates({ periodically = false }) {
 </div> 
           );
         });
-    });
+    }, []);
     return content;
   } catch (err) {
     return <h1>{err}</h1>;
