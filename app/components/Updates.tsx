@@ -7,8 +7,9 @@ export default function Updates({ periodically = false }) {
     var [content, setContent] = useState(<div />);
     useEffect(() => {
       fetch(UPDATES_URL)
-        .then(({ text }) => text())
+        .then((res) => res.json())
         .then(({ updates }) => {
+          console.log(updates);
           setContent(
             <ol class="relative border-s border-gray-200 dark:border-gray-700">
               {updates.map((update) => (
