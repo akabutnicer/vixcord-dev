@@ -31,7 +31,7 @@ export function ErrorBoundary() {
         <h1>Error</h1>
         <p>{error.message}</p>
         <p>The stack trace is:</p>
-        <pre>{error}</pre>
+        <pre>{JSON.stringify(error, Object.getOwnPropertyNames(error))}</pre>
       </div>
     );
   } else {
