@@ -59,7 +59,7 @@ var [catalog, setCatalog] = useState(<div />);
   }, []);
   return (
     <>
-      <Header title="Vixcord" halfway={true} />
+      <Header title="Vixcord" split={true} />
       <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
         <section class="dark:bg-gray-900">
           <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
